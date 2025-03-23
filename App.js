@@ -16,9 +16,9 @@ const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || "mongodb://127.0.0
 mongoose.connect(CONNECTION_STRING);
 const app = express();
 // console.log(process.env.OPENAI_API_KEY);
-app.use('*', cors({
+app.use(cors({
     credentials: true,
-    origin: [process.env.FRONTEND_URL, "http://localhost:3000", process.env.HTTP_SERVER_DOMAIN, "https://senzusocial.netlify.app/?#/Main/Login"],
+    origin: [process.env.FRONTEND_URL, "http://localhost:3000", process.env.HTTP_SERVER_DOMAIN, 'https://senzusocial.netlify.app'],
     methods: ["GET","POST","PUT","DELETE","OPTIONS"],
    allowedHeaders: ["Content-Type","Authorization"],
 }));
