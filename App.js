@@ -6,6 +6,9 @@ import cors from "cors";
 import session from "express-session";
 import ChatRoutes from "./OpenAI/routes.js";
 import UsersRoutes from "./Users/routes.js";
+ import PostRoutes from "./Posts/routes.js";
+ import CommentRoutes from "./Comments/routes.js";
+ import FollowRoutes from "./Follow/routes.js";
 
 const app = express();
 
@@ -43,11 +46,12 @@ app.use(
     session(sessionOptions)
 );
 Hello(app);
-<<<<<<< HEAD
 ChatRoutes(app);
-UsersRoutes(app);
-=======
-Routes(app);
->>>>>>> 6037d6e (set up routes for exercise db api)
+ UsersRoutes(app);
+ FriendRoutes(app);
+ FollowRoutes(app);
+ 
+ PostRoutes(app);
+ CommentRoutes(app);
 app.listen(process.env.PORT || 4000);
 
