@@ -9,6 +9,8 @@ import UsersRoutes from "./Users/routes.js";
  import PostRoutes from "./Posts/routes.js";
  import CommentRoutes from "./Comments/routes.js";
  import FollowRoutes from "./Follow/routes.js";
+ import FriendRoutes from "./Friends/routes.js";
+ 
 
 const app = express();
 
