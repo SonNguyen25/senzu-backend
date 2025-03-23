@@ -18,7 +18,8 @@ const app = express();
 // console.log(process.env.OPENAI_API_KEY);
 app.use(cors({
     credentials: true,
-    origin: [process.env.FRONTEND_URL, "http://localhost:3000"]
+    origin: [process.env.FRONTEND_URL, "http://localhost:3000", process.env.HTTP_SERVER_DOMAIN, "https://senzusocial.netlify.app/?#/Main/Login"],
+    methods: "GET,POST,OPTIONS,PUT",
 }));
 const sessionOptions = {
     secret: process.env.SESSION_SECRET,
