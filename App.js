@@ -18,7 +18,11 @@ app.use(cors({
 const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || "mongodb://127.0.0.1:27017/senzu";
 mongoose.connect(CONNECTION_STRING);
 const app = express();
-console.log(process.env.OPENAI_API_KEY);
+console.log(process.env.OPENAI_API_KEY {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    tls: true, 
+  });
 
 const sessionOptions = {
     secret: process.env.SESSION_SECRET,
