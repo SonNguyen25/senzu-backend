@@ -18,8 +18,9 @@ export default function FollowRoutes(app) {
   };
 
   const findFollowsByUserId = async (req, res) => {
-    const { user } = req.query;
-    const follows = await dao.findFollowsByUserId(user);
+    const { userId } = req.params;
+    console.log(userId);
+    const follows = await dao.findFollowsByUserId(userId);
     res.json(follows);
   };
 
