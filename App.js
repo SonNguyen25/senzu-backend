@@ -21,7 +21,7 @@ mongoose.connect(CONNECTION_STRING,
         useUnifiedTopology: true,
         tls: true, });
 
-console.log(process.env.OPENAI_API_KEY);
+// console.log(process.env.OPENAI_API_KEY);
 
 const sessionOptions = {
     secret: process.env.SESSION_SECRET,
